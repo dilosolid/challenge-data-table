@@ -45,7 +45,11 @@ var calculations = [
 module.exports = createReactClass({
   render () {
     return <div>
-      <ReactPivot rows={rows} dimensions={dimensions} reduce={reduce} calculations={calculations} activeDimensions={['Date','Host']}  />
+      <ReactPivot rows={rows} 
+                  dimensions={dimensions} 
+                  reduce={reduce} 
+                  calculations={calculations} 
+                  activeDimensions={['Date','Host']}  />
     </div>
   }
 })

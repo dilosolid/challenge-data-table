@@ -18,26 +18,14 @@ var reduce = function(row, memo) {
 
   if(row.type === 'display')
     memo.displayTotal = (memo.displayTotal || 0) + 1;
-
-  memo.loadRate = 0
-  memo.displayRate = 0
-
+  
   return memo
 }
 
 var calculations = [
-  {
-    title: 'Impressions', value: 'impressionTotal',
-    template: function(val, row) { return val; }
-  },
-  {
-    title: 'Loads', value: 'loadTotal',
-    template: function(val, row) { return val; }
-  },
-  {
-    title: 'Displays', value: 'displayTotal',
-    template: function(val, row) { return val; }
-  },
+  { title: 'Impressions', value: 'impressionTotal' },
+  { title: 'Loads',       value: 'loadTotal' },
+  { title: 'Displays',    value: 'displayTotal' },
   {
     title: 'Load Rate', value: 'loadRate',
     template: function(val, row) {       
